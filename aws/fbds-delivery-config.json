@@ -1,0 +1,29 @@
+{
+    "destinations": {
+        "video_factory": {
+            "endPoint": "livemodavsharedresources-filearrivalbucket-1dpma9mf1fygb",
+            "role": "arn:aws:iam::240129357028:role/LiveModavFbdsResources-FbdsAccessRole-1SG5Y0ZCJNBVY",
+            "externalId": "55f2030a-2bf0-4b1c-b6c3-42c863fbfd0b"
+        },
+        "video-factory": {
+            "endPoint": "livemodavsharedresources-filearrivalbucket-1dpma9mf1fygb",
+            "role": "arn:aws:iam::240129357028:role/LiveModavFbdsResources-FbdsAccessRole-1SG5Y0ZCJNBVY",
+            "externalId": "55f2030a-2bf0-4b1c-b6c3-42c863fbfd0b"
+        },
+        "media_factory": {
+            "endPoint": "livemodavsharedresources-filearrivalbucket-1dpma9mf1fygb",
+            "role": "arn:aws:iam::240129357028:role/LiveModavFbdsResources-FbdsAccessRole-1SG5Y0ZCJNBVY",
+            "externalId": "55f2030a-2bf0-4b1c-b6c3-42c863fbfd0b"
+        },
+        "media-factory": {
+            "endPoint": "livemodavsharedresources-filearrivalbucket-1dpma9mf1fygb",
+            "role": "arn:aws:iam::240129357028:role/LiveModavFbdsResources-FbdsAccessRole-1SG5Y0ZCJNBVY",
+            "externalId": "55f2030a-2bf0-4b1c-b6c3-42c863fbfd0b"
+        },
+        "test_bucket": {
+            "endPoint": "3",
+            "role": "",
+            "externalId": ""
+        }
+    }
+}
