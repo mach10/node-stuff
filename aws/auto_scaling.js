@@ -1,10 +1,12 @@
 var AWS = require('aws-sdk')
 var proxy = require('proxy-agent')
 var Scaler = require('./auto_scaling.js')
+var moment = require('moment')
+
 //add to AWS.config.update if behind Reith
 //httpOptions: {agent: proxy('http://www-cache.reith.bbc.co.uk:80')}
-//AWS.config.update({region: 'eu-west-1'})
-AWS.config.update({region: 'eu-west-1',httpOptions: {agent: proxy('http://www-cache.reith.bbc.co.uk:80')}})
+AWS.config.update({region: 'eu-west-1'})
+//AWS.config.update({region: 'eu-west-1',httpOptions: {agent: proxy('http://www-cache.reith.bbc.co.uk:80')}})
 var autoscaling = new AWS.AutoScaling();
 var scale_down_params = {
     MaxSize: 0,
@@ -66,5 +68,8 @@ function scaleUpOrDown(upOrDownFunction, upOrDownParams){
         //console.log(scale_down_params)
     });
 }
-scaleUpOrDown(needsSpinningDown, scale_down_params)
-//scaleUpOrDown(needsSpinningUp, scale_up_params)
+if(moment().format("A") == "AM"){
+  scaleUpOrDown(needsSpinningUp, scale_up_params)
+}else{
+  scaleUpOrDown(needsSpinningDown, scale_down_params)
+}
