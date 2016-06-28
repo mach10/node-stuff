@@ -5,8 +5,8 @@ var moment = require('moment')
 
 //add to AWS.config.update if behind Reith
 //httpOptions: {agent: proxy('http://www-cache.reith.bbc.co.uk:80')}
-AWS.config.update({region: 'eu-west-1'})
-//AWS.config.update({region: 'eu-west-1',httpOptions: {agent: proxy('http://www-cache.reith.bbc.co.uk:80')}})
+//AWS.config.update({region: 'eu-west-1'})
+AWS.config.update({region: 'eu-west-1',httpOptions: {agent: proxy('http://www-cache.reith.bbc.co.uk:80')}})
 var autoscaling = new AWS.AutoScaling();
 var scale_down_params = {
     MaxSize: 0,
